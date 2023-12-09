@@ -97,7 +97,7 @@ function App() {
 
 ### Lazy Load Image Component
 
-![image](./src/components/LazyLoadImage/preview.png)
+![image](./src/components/LazyLoadImage/preview.jpg)
 
 #### Example of usage: 
 ```js
