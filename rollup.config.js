@@ -4,6 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
 import postcss from "rollup-plugin-postcss";
 import autoprefixer from 'autoprefixer';
+import terser from '@rollup/plugin-terser';
 
 const packageJson = require("./package.json");
 
@@ -33,6 +34,7 @@ export default [
         namedExports: true,
         plugins: [autoprefixer()],
       }),
+      terser()
     ],
   },
   {
