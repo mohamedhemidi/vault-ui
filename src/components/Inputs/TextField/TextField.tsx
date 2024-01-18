@@ -43,12 +43,12 @@ const TextField = ({
   ${color === "danger" ? styles["danger"] : ""}
   ${color === "success" ? styles["success"] : ""}
   ${color === "neutral" ? styles["neutral"] : ""}
-  `
+  `;
   return (
     <div>
       <div
         className={styles.container}
-        style={width ? { width: width + "rem" } : { width: "20rem" }}
+        style={width ? { width: width + "rem" } : { width: "auto" }}
       >
         <input
           className={`${styles.textField} ${inputClasses}`}
@@ -58,7 +58,7 @@ const TextField = ({
           value={value}
           color={color}
           data-error={error}
-          style={width ? {width: width + "rem"} : {width: "20rem"}}
+          style={width ? { width: width + "rem" } : { width: "auto" }}
           onChange={onChange}
           {...rest}
         />

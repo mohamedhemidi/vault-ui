@@ -47,7 +47,7 @@ const TextArea = ({
     <div>
       <div
         className={styles.container}
-        style={width ? { width: width + "rem" } : { width: "20rem" }}
+        style={width ? { width: width + "rem" } : { width: "auto" }}
       >
         <textarea
           className={`${styles.textField} ${inputClasses}`}
@@ -57,10 +57,12 @@ const TextArea = ({
           color={color}
           data-error={error}
           onChange={onChange}
-          style={width ? { width: width + "rem" } : { width: "20rem" }}
+          style={width ? { width: width + "rem" } : { width: "auto" }}
           {...rest}
         />
-        <label htmlFor={name} className={`${styles.Label} ${inputClasses}`}>{label}</label>
+        <label htmlFor={name} className={`${styles.Label} ${inputClasses}`}>
+          {label}
+        </label>
       </div>
       {error && errorMessage ? (
         <div className={styles.errorMessage}>{errorMessage}</div>
