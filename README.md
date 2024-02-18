@@ -108,6 +108,8 @@ src={'your_image_path'} alt='alt text' borderRadius="2rem" />
 
 ## Toast Component
 
+![image](./src/components/Toast/preview.png)
+
 A light and responsive notifications toasts component:
 
 ```js
