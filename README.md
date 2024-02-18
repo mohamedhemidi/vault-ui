@@ -6,7 +6,8 @@
 3. [Input text components](#InputTextComponent)
 4. [Select components](#SelectComponent)
 5. [Lazy Load Image Component](#LazyLoadImageComponent)
-6. [API references and Usage](#ApiUsageAndReferences)
+6. [Toast Component](#ToastComponent)
+7. [API references and Usage](#ApiUsageAndReferences)
 
 ## Installation 
 ```sh
@@ -105,6 +106,21 @@ function App() {
 src={'your_image_path'} alt='alt text' borderRadius="2rem" />
 ```
 
+## Toast Component
+
+A light and responsive notifications toasts component:
+
+```js
+const [active, setsActive] = useState(false);
+
+<Toast
+    message="You signed up successfully" // Toast message
+    timer={6} // 6 seconds to close
+    active={active} // 
+    close={() => setsActive(false)}
+/>
+
+```
 ## API References and Usage
 
 ### API references doc for the button component and usage
