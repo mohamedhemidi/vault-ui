@@ -54,6 +54,7 @@ const TextField = ({
           className={`${styles.textField} ${inputClasses}`}
           type={type}
           placeholder={placeholder}
+          id={name}
           name={name}
           value={value}
           color={color}

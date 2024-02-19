@@ -53,6 +53,7 @@ const TextArea = ({
           className={`${styles.textField} ${inputClasses}`}
           placeholder={placeholder}
           name={name}
+          id={name}
           value={value}
           color={color}
           data-error={error}
