@@ -21,9 +21,10 @@ type SingleSelectProps = {
 
 type SelectProps = {
   options: SelectOption[];
+  id?: string;
 } & (SingleSelectProps | MultipleSelectProps);
 
-const Select = ({ multiple, value, onChange, options }: SelectProps) => {
+const Select = ({ multiple, value, onChange, options , id}: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,11 +86,12 @@ const Select = ({ multiple, value, onChange, options }: SelectProps) => {
       // eslint-disable-next-line react-hooks/exhaustive-deps
       containerRef.current?.removeEventListener("keydown", handler);
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, highlightedIndex, options]);
 
   return (
     <div
+      id={id}
       ref={containerRef}
       onBlur={() => setIsOpen(false)}
       onClick={() => setIsOpen((prev) => !prev)}
